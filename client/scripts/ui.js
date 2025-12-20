@@ -1,3 +1,4 @@
+//Load navigation bar
 fetch("components/nav-bar.html")
   .then((response) => response.text())
   .then((html) => {
@@ -5,6 +6,7 @@ fetch("components/nav-bar.html")
   })
   .catch((err) => console.error("Error loading nav:", err));
 
+//Load footer
 fetch("components/footer.html")
   .then((response) => response.text())
   .then((html) => {

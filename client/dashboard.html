@@ -1,5 +1,67 @@
 <html>
   <head>
     <title>Dashboard | Historical Weather Explorer</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="scripts/ui.js" defer></script>
+    <script src="scripts/dashboard.js" defer></script>
   </head>
+  <body>
+    <div id="nav-placeholder"></div>
+
+    <main class="dashboard-container">
+      <!--Top Controls Section-->
+      <section class="dashboard-controls">
+        <h1>Weather Dashboard</h1>
+
+        <div class="control-row">
+          <input type="text" id="cityInput" placeholder="Enter a city" />
+          <button id="searchBtn">Search</button>
+          <button id="locationBtn">Use My Location</button>
+        </div>
+
+        <div class="control-row">
+          <label>
+            Weather Variable:
+            <select id="variableSelect">
+              <option value="temperature_2m">Temperature (°C)</option>
+              <option value="precipitation">Precipitation (mm)</option>
+              <option value="windspeed_10m">Wind Speed (km/h)</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="control-row">
+          <label>
+            Start Date:
+            <input type="date" id="startDate" />
+          </label>
+
+          <label>
+            End Date:
+            <input type="date" id="endDate" />
+          </label>
+
+          <button id="updateBtn">Update Chart</button>
+        </div>
+
+        <p id="statusMessage"></p>
+      </section>
+
+      <section class="dashboard-map">
+        <div id="map"></div>
+      </section>
+
+      <section class="dashboard-chart" id="chartContainer">
+        <canvas id="weatherChart"></canvas>
+      </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+  </body>
 </html>
