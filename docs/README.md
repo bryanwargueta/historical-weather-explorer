@@ -47,7 +47,8 @@ Historical Weather Explorer is a web app that allows users to search for histori
    Manual testing can be done via the dashboard by making searches, verifying chart rendering, and verifying Supabase records
 
 8. API Reference
-   POST - /api/search - Stores a user search in Supabase. Request body should include: city, latitude, longitude, variable, date_start, date_end
+
+POST - /api/search - Stores a user search in Supabase. Request body should include: city, latitude, longitude, variable, date_start, date_end
 
 GET - /api/health - returns {status: "ok"}. Used to check the servers health
 
