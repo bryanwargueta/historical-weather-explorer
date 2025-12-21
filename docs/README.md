@@ -1,5 +1,7 @@
 # Historical Weather Explorer
 
+Live Demo: https://historical-weather-explorer.vercel.app/
+
 ## Overview
 
 Historical Weather Explorer is a web app that allows users to search for historical weather data for any city. Users can view temperature, precipitation, and wind speed over a selected date range of their choosing. The app provides interactive charts using Chart.js and displays the searched location on a Leaflet map. All user searches are stored in a Supabase database for session history tracking.
